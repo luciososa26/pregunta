@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    background-color: #ecaeae;
+    font-family: 'Georgia', serif;
+    color: #3e1f1f;
+}
+
+div {
+    height: 90dvh;
+    margin: 0;
+    padding: 0 5%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    max-width: 50%;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* pag1 y pag3: texto a la izquierda, centrado vertical */
+.pag1,
+.pag3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 8%;
+    background-image: url('img1.jpeg');
+}
+
+/* pag2 y pag4: texto a la derecha, centrado vertical */
+.pag2,
+.pag4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    padding-right: 8%;
+    background-image: url('img2.jpeg');
+}
+
+/* pag5: imagen + texto centrado */
+.pag5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px 5%;
+    background-color: #ecaeae;
+    text-align: left;
+}
+
+/* contenedor del texto */
+.pag5txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.pag5txt p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 22px 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 480px;
+    max-width: 90%;
+}
+
+
+/* imagen de pag5 */
+.pag5 img {
+    width: 45%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* recuadro con la pregunta final si no funciona borrar esto*/
+.pregunta-final {
+    width: 100%;
+    max-width: 480px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px 28px;
+    border-radius: 14px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    color: #b04156;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 100px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 50px;
+}
+
+.botones button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 90px;
+}
+
+.btn-si {
+    background-color: #b04156;
+    color: white;
+}
+
+.btn-si:hover {
+    background-color: #8d2f44;
+}
+
+.btn-no {
+    background-color: #e3e3e3;
+    color: #444;
+}
+
+.btn-no:hover {
+    background-color: #cccccc;
+}
+
+/* === MEDIA QUERIES PARA DISPOSITIVOS PEQUEÑOS Y TABLETS === */
+
+@media (max-width: 1024px) {
+    p {
+        max-width: 90%;
+        font-size: 1.1rem;
+        padding: 16px;
+    }
+
+    .pag1,
+    .pag2,
+    .pag3,
+    .pag4 {
+        padding: 0 5%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pag5 {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 30px 5%;
+    }
+
+    .pag5 img {
+        width: 90%;
+    }
+
+    .pag5txt {
+        align-items: center;
+    }
+
+    .pag5txt p {
+        width: 100%;
+        font-size: 1rem;
+        padding: 18px;
+    }
+
+    .pregunta-final {
+        font-size: 1.2rem;
+        padding: 16px 20px;
+        height: auto;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 12px;
+        height: auto;
+    }
+
+    .botones button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .pag5txt p {
+        font-size: 0.95rem;
+    }
+
+    .pregunta-final {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+
+    .botones button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
